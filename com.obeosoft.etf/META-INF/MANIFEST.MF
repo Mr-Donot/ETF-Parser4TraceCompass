@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Etf
+Bundle-SymbolicName: com.obeosoft.etf
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: OBEOSOFT
+Automatic-Module-Name: com.obeosoft.etf
+Bundle-RequiredExecutionEnvironment: JavaSE-17
