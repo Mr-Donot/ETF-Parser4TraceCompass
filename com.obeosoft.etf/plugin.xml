@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.linuxtools.tmf.core.tracetype">
+      <type
+            category="com.obeosoft.etf.category"
+            event_type="org.eclipse.tracecompass.tmf.core.event.TmfEvent"
+            id="com.obeosoft.etf.trace"
+            isDirectory="false"
+            name="ETF Trace"
+            trace_type="com.obeosoft.etf.trace.EtfTrace">
+      </type>
+      <category
+            id="com.obeosoft.etf.category"
+            name="ETF Traces">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.linuxtools.tmf.core.analysis">
+      <module
+            analysis_module="com.obeosoft.etf.analysis.EtfAnalysisModule"
+            automatic="true"
+            id="org.eclipse.linuxtools.btf.core.analysis"
+            name="ETF Analysis">
+         <tracetype
+               applies="true"
+               class="com.obeosoft.etf.trace.EtfTrace">
+         </tracetype>
+      </module>
+      <tracetype
+            applies="false"
+            class="com.obeosoft.etf.trace.EtfTrace"
+            id="org.eclipse.tracecompass.internal.analysis.timing.core.callgraph.callgraphanalysis">
+      </tracetype>
+   </extension>
+</plugin>
